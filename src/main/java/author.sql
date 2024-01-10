@@ -1,4 +1,5 @@
 CREATE TABLE IF NOT EXISTS author(
+    id   SERIAL PRIMARY KEY,
     name    VARCHAR(50),
     last_name   VARCHAR(50),
     age   int,
