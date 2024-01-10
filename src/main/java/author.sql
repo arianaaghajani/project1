@@ -4,3 +4,9 @@ CREATE TABLE IF NOT EXISTS author(
     age   int,
     book_name   VARCHAR(100)
 );
+
+CREATE TABLE IF NOT EXISTS book(
+    title   VARCHAR(100),
+    print_year  DATE,
+    author  VARCHAR(100)
+);
