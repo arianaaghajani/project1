@@ -1,6 +1,7 @@
 import javax.xml.crypto.Data;
 
 public class Book {
+    private int id;
     private String title;
     private Data printYear;
     private String author;
