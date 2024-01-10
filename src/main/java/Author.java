@@ -5,11 +5,12 @@ public class Author{
     private int age;
     private String[] books;
 
-    public Author(String name, String lastName, int age, String[] books) {
+    public Author(String name, String lastName, int age, String[] books,int id) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.books = books;
+        this.id=id;
     }
 
     public String getName() {
