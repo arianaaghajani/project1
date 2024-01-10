@@ -44,4 +44,12 @@ public class Author{
     public void setBooks(String[] books) {
         this.books = books;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
