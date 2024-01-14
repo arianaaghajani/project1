@@ -5,19 +5,19 @@ public class Author{
     private String name;
     private String lastName;
     private int age;
-    private book[] books;
+    private Book[] books;
 
     public Author() {
     }
 
-    public Author(String name, String lastName, int age, book[] books) {
+    public Author(String name, String lastName, int age, Book[] books) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.books = books;
     }
 
-    public Author(int id, String name, String lastName, int age, book[] books) {
+    public Author(int id, String name, String lastName, int age, Book[] books) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -57,11 +57,22 @@ public class Author{
         this.age = age;
     }
 
-    public book[] getBooks() {
+    public Book[] getBooks() {
         return books;
     }
 
-    public void setBooks(book[] books) {
+    public void setBooks(Book[] books) {
         this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", books=" + Arrays.toString(books) +
+                '}';
     }
 }
