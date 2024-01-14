@@ -10,11 +10,10 @@ public class Author{
     public Author() {
     }
 
-    public Author(String name, String lastName, int age, Book[] books) {
+    public Author(String name, String lastName, int age) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-        this.books = books;
     }
 
     public Author(int id, String name, String lastName, int age, Book[] books) {
