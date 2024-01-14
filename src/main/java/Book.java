@@ -3,7 +3,7 @@ import javax.xml.crypto.Data;
 public class Book {
     private int id;
     private String title;
-    private Data printYear;
+    private int printYear;
     private int authorId;
 
     public Book(int id, String title, Data printYear, int authorId) {
