@@ -13,6 +13,17 @@ public class Book {
         this.authorId = authorId;
     }
 
+    public Book() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -29,19 +40,11 @@ public class Book {
         this.printYear = printYear;
     }
 
-    public String getAuthor() {
-        return author;
+    public int getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 }
