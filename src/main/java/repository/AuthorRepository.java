@@ -49,7 +49,18 @@ public class AuthorRepository {
         while (resultSet.next()){
             counter ++;
         }
+        Book[]books =new Book[counter];
+        resultSet.beforeFirst();
+        int i= -1;
+        while (resultSet.next()){
+            i++;
+            int id= resultSet.getInt("bookId");
+            String title =resultSet.getString("bookName");
+            int printYear =resultSet.getInt("printYear");
+            int authorId= resultSet.getInt("authorId");
+            books[i]=new Book(id,title,printYear,authorId);
+
+        }
+        return books;
     }
-
-
 }
