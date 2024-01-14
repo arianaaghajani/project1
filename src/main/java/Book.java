@@ -6,7 +6,12 @@ public class Book {
     private Data printYear;
     private int authorId;
 
-
+    public Book(int id, String title, Data printYear, int authorId) {
+        this.id = id;
+        this.title = title;
+        this.printYear = printYear;
+        this.authorId = authorId;
+    }
 
     public String getTitle() {
         return title;
