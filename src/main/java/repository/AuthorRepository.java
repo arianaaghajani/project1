@@ -2,6 +2,7 @@ package repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AuthorRepository {
@@ -20,4 +21,23 @@ public class AuthorRepository {
         preparedStatement.setInt(3, author.getAge());
         return preparedStatement.executeUpdate();
     }
+    public Author load(int authorId) throws SQLException{
+        String loadAuthor="SELECT * FROM author where id=?;";
+        PreparedStatement preparedStatement =connection.prepareStatement(loadAuthor);
+        PreparedStatement.setInt(1,authorId);
+        ResultSet resultSet=preparedStatement.executeQuery();
+        if(resultSet.next()){
+            int id=resultSet.getInt("id");
+            String name=resultSet.getString("name");
+            String lastName=resultSet.getString("lastName");
+            int age=resultSet.getInt("age");
+            return new Author(id,name,lastName,age);
+        }
+        else {
+            return null;
+        }
+
+    }
+
+
 }
