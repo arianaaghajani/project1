@@ -13,9 +13,6 @@ public class Book {
         this.authorId = authorId;
     }
 
-    public Book() {
-    }
-
     public int getId() {
         return id;
     }
@@ -32,11 +29,11 @@ public class Book {
         this.title = title;
     }
 
-    public Data getPrintYear() {
+    public int getPrintYear() {
         return printYear;
     }
 
-    public void setPrintYear(Data printYear) {
+    public void setPrintYear(int printYear) {
         this.printYear = printYear;
     }
 
