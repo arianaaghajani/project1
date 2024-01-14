@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS author(
 CREATE TABLE IF NOT EXISTS book(
     title   VARCHAR(100),
     print_year  DATE,
-    author  VARCHAR(100)
+    authorId  int
 );
