@@ -16,12 +16,11 @@ public class Author{
         this.age = age;
     }
 
-    public Author(int id, String name, String lastName, int age, Book[] books) {
+    public Author(int id, String name, String lastName, int age) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-        this.books = books;
     }
 
     public int getId() {
