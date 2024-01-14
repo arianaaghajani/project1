@@ -1,5 +1,6 @@
 package repository;
 
+import java.awt.print.Book;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -37,6 +38,17 @@ public class AuthorRepository {
             return null;
         }
 
+    }
+    public Book[] getListOfBook(int authorId) throws SQLException{
+        String listBook="SELECT * FROM books WHERE authorId=?;";
+        PreparedStatement preparedStatement=connection.prepareStatement(listBook,
+                ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+        PreparedStatement.setInt(1,authorId);
+        ResultSet resultSet=preparedStatement.executeQuery();
+        int counter=0;
+        while (resultSet.next()){
+            counter ++;
+        }
     }
 
 
