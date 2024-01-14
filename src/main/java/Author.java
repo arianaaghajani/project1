@@ -5,15 +5,9 @@ public class Author{
     private String name;
     private String lastName;
     private int age;
-    private String[] books;
+    private book[] books;
 
-    public Author(String name, String lastName, int age, String[] books,int id) {
-        this.name = name;
-        this.lastName = lastName;
-        this.age = age;
-        this.books = books;
-        this.id=id;
-    }
+
 
     public String getName() {
         return name;
@@ -39,7 +33,7 @@ public class Author{
         this.age = age;
     }
 
-    public String[] getBooks() {
+    public Stri[] getBooks() {
         return books;
     }
 
