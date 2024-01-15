@@ -28,4 +28,11 @@ public class BookService {
             System.out.println("not added");
 
     }
+    public void findById() throws SQLException{
+        System.out.println("enter book id: ");
+        int bookId=scanner.nextLine();
+        scanner.nextLine();
+        Book book=bookRepository.load(bookId);
+        System.out.println(book);
+    }
 }
