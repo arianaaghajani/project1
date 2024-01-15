@@ -3,6 +3,7 @@ package service;
 
 import repository.AuthorRepository;
 
+import java.awt.print.Book;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -30,7 +31,10 @@ public class AuthorService {
 
     public void findById() throws SQLException{
         System.out.println("enter authorId: ");
+        int authorId=scanner.nextLine();
         scanner.nextLine();
-        Author author=authorRepository.load(au)
+        Author author=authorRepository.load(authorId);
+        Book[] books=AuthorRepository.get
+
     }
 }
