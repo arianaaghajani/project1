@@ -3,6 +3,7 @@ package repository;
 import java.awt.print.Book;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class BookRepository {
@@ -20,6 +21,22 @@ public class BookRepository {
         return preparedStatement.executeUpdate();
 
 
+    }
+    public Book load(int bookId) throws SQLException{
+        String loadBook="SELECT * FROM book WHERE bookId= ? ;";
+        PreparedStatement preparedStatement=connection.prepareStatement(loadBook);
+        preparedStatement.setInt(1,bookId);
+        ResultSet resultSet= preparedStatement.executeQuery();
+        if (resultSet.next()){
+            int id=resultSet.getInt("id");
+            String title=resultSet.getString("title");
+            int printYear=resultSet.getInt("printYear");
+            int authorId=resultSet.getInt("authorId");
+            return new Book(id,title,printYear,authorId);
+        }
+        else {
+            return null;
+        }
 
     }
 }
