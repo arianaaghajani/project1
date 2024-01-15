@@ -2,6 +2,7 @@ package service;
 
 import repository.BookRepository;
 
+import java.awt.print.Book;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -19,6 +20,12 @@ public class BookService {
         System.out.println("enter authorId of book");
         int authorId=scanner.nextInt();
         scanner.nextLine();
+        Book book=new Book(title,year,authorId);
+        int result=bookRepository.save(book);
+        if (result==1)
+            System.out.println("The book is added");
+        else
+            System.out.println("not added");
 
     }
 }
