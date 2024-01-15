@@ -21,10 +21,16 @@ public class AuthorService {
         String age=scanner.nextLine();
         scanner.nextInt();
         Author author=new Author(name,lastName,age);
-        int resulte=AuthorRepository.save(author);
-        if (resulte==1)
+        int result=AuthorRepository.save(author);
+        if (result==1)
             System.out.println("The author is register");
         else
             System.out.println("error");
+    }
+
+    public void findById() throws SQLException{
+        System.out.println("enter authorId: ");
+        scanner.nextLine();
+        Author author=authorRepository.load(au)
     }
 }
